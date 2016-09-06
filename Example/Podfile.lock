@@ -1,0 +1,23 @@
+PODS:
+  - FBSnapshotTestCase (2.1.2):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.2)
+  - FBSnapshotTestCase/Core (2.1.2)
+  - FBSnapshotTestCase/SwiftSupport (2.1.2):
+    - FBSnapshotTestCase/Core
+  - JFAlgo (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - JFAlgo (from `../`)
+
+EXTERNAL SOURCES:
+  JFAlgo:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
+  JFAlgo: 9c19f2296c6c42a2051853d8e0fc6038448253ab
+
+PODFILE CHECKSUM: 7ea9040794aab4e96537371bf09ae17688edbd3b
+
+COCOAPODS: 1.0.0.beta.6

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JFAlgo_Example' do
+  pod 'JFAlgo', :path => '../'
+
+  target 'JFAlgo_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end

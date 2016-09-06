@@ -1,0 +1,6 @@
+framework module JFAlgo {
+  umbrella header "JFAlgo-umbrella.h"
+
+  export *
+  module * { export * }
+}
