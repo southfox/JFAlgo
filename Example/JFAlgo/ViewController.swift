@@ -13,7 +13,7 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
 
     @IBOutlet weak var tableView: UITableView!
     
-    var algorithms : [AnyClass] = [ JFAlgo.BinaryGap, JFAlgo.OddOccurrencesInArray ]
+    var algorithms : [AnyClass] = [ JFAlgo.BinaryGap, JFAlgo.OddOccurrencesInArray, JFAlgo.CyclickRotation ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +46,11 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier(NSStringFromClass(algorithms[indexPath.row]), sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let vc = segue.destinationViewController
+        vc.title = segue.identifier
     }
     
 }

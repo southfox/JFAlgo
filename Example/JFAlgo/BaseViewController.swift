@@ -10,8 +10,8 @@ import UIKit
 
 class BaseViewController : UIViewController {
     
-    func showAlert(title: String, message: String, completion: (() -> Void)?) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+    func showAlert(message: String, completion: (() -> Void)?) {
+        let alert = UIAlertController(title: self.title, message: message, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: completion)
     }

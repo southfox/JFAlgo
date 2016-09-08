@@ -43,7 +43,7 @@ class BinaryGapViewController : BaseViewController {
         }
         runButton.enabled = false
         let solution = JFAlgo.BinaryGap.solution(number)
-        self.showAlert("BinaryGap", message: "\(number): Solution = \(solution)") { [weak self] in
+        self.showAlert("\(number): Solution = \(solution)") { [weak self] in
             if let strong = self {
                 strong.runButton.enabled = true
             }

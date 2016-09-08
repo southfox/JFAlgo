@@ -26,6 +26,7 @@
 		85D178DFCA1BC67BBFB1188E34EC5B19 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */; };
 		8ACF6A5515A175054E22414BF740EF14 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		951FE18C1D80EFEC00C8E5D9 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FE18B1D80EFEC00C8E5D9 /* Sort.swift */; };
+		951FE18E1D80FB1100C8E5D9 /* CyclickRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FE18D1D80FB1100C8E5D9 /* CyclickRotation.swift */; };
 		9FA3B93CE0ECAC3CDC30890659AACF82 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8CBC7114A8BD478997288E693D19A8E /* Pods-JFAlgo_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C79D7E8708F3FC54EC0B7EB262BE5F93 /* Pods-JFAlgo_Tests-dummy.m */; };
 		AF71288962592437482103B1BEA83730 /* JFAlgo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E94C4288BD5A4251593673967C682B8 /* JFAlgo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -104,6 +105,7 @@
 		923485C1C171EDE20D81CE0F6E48E006 /* JFAlgo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFAlgo-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		951FE18B1D80EFEC00C8E5D9 /* Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		951FE18D1D80FB1100C8E5D9 /* CyclickRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyclickRotation.swift; sourceTree = "<group>"; };
 		9734DF55B42ABEDC46CFC011F55EFE75 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		A9574F9CDE427F87174E10D4D6448C0B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB10328BF03076ADA1C17F4B47A2DAAB /* Pods_JFAlgo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFAlgo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +262,7 @@
 				E4BABF49F02D7D7393BB56B8EF90C17A /* All.swift */,
 				E83CDFFCA7E5FB67CC7762AFDAF384BE /* BinaryGap.swift */,
 				BE808C8FA9C663FF4FFC834F3CDE37D6 /* OddOccurrencesInArray.swift */,
+				951FE18D1D80FB1100C8E5D9 /* CyclickRotation.swift */,
 				951FE18B1D80EFEC00C8E5D9 /* Sort.swift */,
 			);
 			path = Classes;
@@ -528,6 +531,7 @@
 			files = (
 				0E1215576C348A49A270DBDD19D8D075 /* All.swift in Sources */,
 				56FBC9AF5C91001D48125D13B70E9C58 /* BinaryGap.swift in Sources */,
+				951FE18E1D80FB1100C8E5D9 /* CyclickRotation.swift in Sources */,
 				DD29DF018864A5FF377DEA76AAFF842D /* JFAlgo-dummy.m in Sources */,
 				951FE18C1D80EFEC00C8E5D9 /* Sort.swift in Sources */,
 				E32949667B01EFD73C2302EB68F3AA9E /* OddOccurrencesInArray.swift in Sources */,

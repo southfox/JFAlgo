@@ -1,5 +1,5 @@
 //
-//  OddOccurrencesInArrayViewController.swift
+//  CyclickRotationViewController.swift
 //  JFAlgo
 //
 //  Created by Javier Fuchs on 9/7/16.
@@ -9,47 +9,30 @@
 import Foundation
 import JFAlgo
 
-//  A non-empty zero-indexed array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
+// A zero-indexed array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is also moved to the first place.
 //
-//  For example, in array A such that:
+// For example, the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7]. The goal is to rotate array A K times; that is, each element of A will be shifted to the right by K indexes.
 //
-//  A[0] = 9  A[1] = 3  A[2] = 9
-//  A[3] = 3  A[4] = 9  A[5] = 7
-//  A[6] = 9
-//  the elements at indexes 0 and 2 have value 9,
-//  the elements at indexes 1 and 3 have value 3,
-//  the elements at indexes 4 and 6 have value 9,
-//  the element at index 5 has value 7 and is unpaired.
-//  Write a function:
+// Write a function:
 //
-//  public func solution(inout A : [Int]) -> Int
-//  that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.
+// public func solution(inout A : [Int], _ K : Int) -> [Int]
+// that, given a zero-indexed array A consisting of N integers and an integer K, returns the array A rotated K times.
 //
-//  For example, given array A such that:
+// For example, given array A = [3, 8, 9, 7, 6] and K = 3, the function should return [9, 7, 6, 3, 8].
 //
-//  A[0] = 9  A[1] = 3  A[2] = 9
-//  A[3] = 3  A[4] = 9  A[5] = 7
-//  A[6] = 9
-//  the function should return 7, as explained in the example above.
+// Assume that:
 //
-//  Assume that:
-//
-//  N is an odd integer within the range [1..1,000,000];
-//  each element of array A is an integer within the range [1..1,000,000,000];
-//  all but one of the values in A occur an even number of times.
-//  Complexity:
-//
-//  expected worst-case time complexity is O(N);
-//  expected worst-case space complexity is O(1), beyond input storage (not counting the storage required for input arguments).
-//  Elements of input arrays can be modified.
+// N and K are integers within the range [0..100];
+// each element of array A is an integer within the range [−1,000..1,000].
+// In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 
-class OddOccurrencesInArrayViewController : BaseViewController, UITextFieldDelegate, UICollectionViewDataSource {
+class CyclickRotationViewController : BaseViewController, UITextFieldDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var numberField: UITextField!
+    @IBOutlet weak var cyclesField: UITextField!
     @IBOutlet weak var runButton: UIButton!
     @IBOutlet weak var generateButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-    
     var A : [Int]?
     
     
@@ -78,10 +61,16 @@ class OddOccurrencesInArrayViewController : BaseViewController, UITextFieldDeleg
     @IBAction func runAction() {
         guard let text = numberField.text,
             number = Int(text) else {
-            return
+                return
+        }
+        
+        guard let cycles = cyclesField.text,
+            numberOfCycles = Int(cycles) else {
+                return
         }
         
         numberField.endEditing(true)
+        cyclesField.endEditing(true)
         handleTap()
         
         let closure : (()->())? = { [weak self] in
@@ -97,32 +86,35 @@ class OddOccurrencesInArrayViewController : BaseViewController, UITextFieldDeleg
         }
         
         runButton.enabled = false
-        if JFAlgo.OddOccurrencesInArray.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be an odd integer within the range [1..1000000]", completion: closure)
-           return
+        if JFAlgo.CyclickRotation.checkDomainGenerator(number) == false {
+            self.showAlert("\(number) should be within the range [1..100]", completion: closure)
+            return
+        }
+        
+        if JFAlgo.CyclickRotation.checkDomainGenerator(numberOfCycles) == false {
+            self.showAlert("\(numberOfCycles) should be within the range [1..100]", completion: closure)
+            return
         }
         
         guard var array = A else {
             self.showAlert("\(number) generates a nil array.", completion: closure)
-           return
+            return
         }
         
-        let solution = JFAlgo.OddOccurrencesInArray.solution(&array)
-        if solution != 0 {
-            self.showAlert("\(number) generates an array with 1 unpaired element \(solution).", completion: closure)
-        }
-        else {
-            self.showAlert("No Solution for \(number)", completion: closure)
-        }
+        JFAlgo.CyclickRotation.solution(&array, numberOfCycles)
+        A = array
+        self.collectionView.reloadData()
+        runButton.enabled = true
     }
     
     @IBAction func generateAction(sender: AnyObject) {
         guard let text = numberField.text,
             number = Int(text) else {
-            return
+                return
         }
         
         numberField.endEditing(true)
+        cyclesField.endEditing(true)
         let closure : (()->())? = { [weak self] in
             if let strong = self {
                 if let array = strong.A {
@@ -137,14 +129,14 @@ class OddOccurrencesInArrayViewController : BaseViewController, UITextFieldDeleg
         
         generateButton.enabled = false
         
-        if JFAlgo.OddOccurrencesInArray.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be an odd integer within the range [1..1000000]", completion: closure)
-           return
+        if JFAlgo.CyclickRotation.checkDomainGenerator(number) == false {
+            self.showAlert("\(number) should be within the range [1..100]", completion: closure)
+            return
         }
         
-        guard let array = JFAlgo.OddOccurrencesInArray.generateDomain(number) else {
+        guard let array = JFAlgo.CyclickRotation.generateDomain(number) else {
             self.showAlert("\(number) generates a nil array.", completion: closure)
-           return
+            return
         }
         
         A = array
@@ -166,7 +158,7 @@ class OddOccurrencesInArrayViewController : BaseViewController, UITextFieldDeleg
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("odds", forIndexPath: indexPath)
         if let textfield : UITextField = cell.contentView.subviews.first as? UITextField,
-           let array = A {
+            let array = A {
             textfield.text = String(array[indexPath.row])
         }
         return cell

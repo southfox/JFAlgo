@@ -45,7 +45,7 @@ import Foundation
 public class OddOccurrencesInArray {
     
     public class func checkDomainGenerator(number : Int) -> Bool {
-        return number < 1 || number > 1000000 || (number % 2) == 0
+        return number >= 1 && number <= 1000000 && (number % 2) == 0
     }
     
     public class func generateDomain(number : Int) -> [Int]? {
@@ -62,12 +62,6 @@ public class OddOccurrencesInArray {
         
         return A
     }
-    
-    
-    //   0 1 2
-    // 0
-    // 1
-    // 2
     
     public class func solution(inout A : [Int]) -> Int {
         var count = [Int: Int]()
@@ -89,7 +83,4 @@ public class OddOccurrencesInArray {
         
         return 0
     }
-    
-    
-
 }

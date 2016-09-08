@@ -17,9 +17,7 @@ class Sort {
             swapped = false
             for i in 1...n - 1 {
                 if A[i - 1] > A[i] {
-                    let tmp = A[i]
-                    A[i] = A[i - 1]
-                    A[i - 1] = tmp
+                    swap(&A, i: i, j: i - 1)
                     swapped = true
                     newn = i
                 }
@@ -152,7 +150,7 @@ class Sort {
     }
     
     
-    private class func swap(inout A: [Int], i : Int, j : Int) {
+    public class func swap(inout A: [Int], i : Int, j : Int) {
         let tmp = A[i]
         A[i] = A[j]
         A[j] = tmp
