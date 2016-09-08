@@ -13,9 +13,32 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
 
     @IBOutlet weak var tableView: UITableView!
     
-    var algorithms : [AnyClass] = [ JFAlgo.BinaryGap, JFAlgo.OddOccurrencesInArray,
-                                    JFAlgo.CyclickRotation, JFAlgo.TapeEquilibrium,
-                                    JFAlgo.FrogJmp, JFAlgo.PermMissingElem ]
+    var algorithms : [[String : AnyObject]] = [
+          [
+            "title" : JFAlgo.BinaryGap,
+            "subtitle" : "Find longest sequence of zeros in binary representation of an integer."
+          ],
+          [
+            "title" : JFAlgo.OddOccurrencesInArray,
+            "subtitle" : "Find value that occurs in odd number of elements."
+          ],
+          [
+            "title" : JFAlgo.CyclickRotation,
+            "subtitle" : "Rotate an array to the right by a given number of steps."
+          ],
+          [
+            "title" : JFAlgo.TapeEquilibrium,
+            "subtitle" : "Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|.",
+          ],
+          [
+            "title" : JFAlgo.FrogJmp,
+            "subtitle" : "Count minimal number of jumps from position X to Y."
+          ],
+          [
+            "title" : JFAlgo.PermMissingElem,
+            "subtitle" : "Find the missing element in a given permutation.",
+        ]
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +54,14 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("algorithms", forIndexPath: indexPath)
+        let dict = algorithms[indexPath.row]
         
-        if let textLabel = cell.textLabel {
-            textLabel.text = NSStringFromClass(algorithms[indexPath.row])
+        if let textLabel = cell.textLabel,
+           let detailTextLabel = cell.detailTextLabel,
+           let title = dict["title"],
+           let subtitle = dict["subtitle"] {
+            textLabel.text = String(title)
+            detailTextLabel.text = String(subtitle)
         }
         
         return cell
@@ -47,7 +75,11 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier(NSStringFromClass(algorithms[indexPath.row]), sender: self)
+        let dict = algorithms[indexPath.row]
+        if let title = dict["title"] {
+            let segue = String(title)
+            self.performSegueWithIdentifier(segue, sender: self)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
