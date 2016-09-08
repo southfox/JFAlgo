@@ -50,6 +50,7 @@
                         <segue destination="2J3-eJ-AV9" kind="show" identifier="JFAlgo.BinaryGap" id="gOS-vK-9L8"/>
                         <segue destination="Tbb-bQ-abm" kind="show" identifier="JFAlgo.OddOccurrencesInArray" id="UMy-y7-oTL"/>
                         <segue destination="xMP-IC-YX6" kind="show" identifier="JFAlgo.CyclickRotation" id="s1Z-ms-sOk"/>
+                        <segue destination="58i-Wu-bVs" kind="show" identifier="JFAlgo.TapeEquilibrium" id="nGd-2Z-Nau"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -192,7 +193,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="155" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6I6-gY-wgT">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6I6-gY-wgT">
                                                     <rect key="frame" x="5" y="10" width="142" height="30"/>
                                                     <color key="backgroundColor" red="0.0" green="0.99769765138626099" blue="0.11377768963575363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -203,9 +204,9 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="6I6-gY-wgT" firstAttribute="centerX" secondItem="CbW-wo-p21" secondAttribute="centerX" id="I4K-Vc-rNT"/>
-                                            <constraint firstItem="6I6-gY-wgT" firstAttribute="centerY" secondItem="CbW-wo-p21" secondAttribute="centerY" id="UbP-5A-SWg"/>
-                                            <constraint firstItem="6I6-gY-wgT" firstAttribute="leading" secondItem="CbW-wo-p21" secondAttribute="leadingMargin" constant="-3" id="ZlU-UW-sbO"/>
+                                            <constraint firstItem="6I6-gY-wgT" firstAttribute="leading" secondItem="CbW-wo-p21" secondAttribute="leadingMargin" constant="-3" id="YJG-rR-7OX"/>
+                                            <constraint firstItem="6I6-gY-wgT" firstAttribute="centerY" secondItem="CbW-wo-p21" secondAttribute="centerY" id="eoD-xf-SfO"/>
+                                            <constraint firstItem="6I6-gY-wgT" firstAttribute="trailing" secondItem="CbW-wo-p21" secondAttribute="trailingMargin" id="qwv-fg-eet"/>
                                         </constraints>
                                     </collectionViewCell>
                                 </cells>
@@ -235,6 +236,127 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lZ-Ry-zrs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1973" y="1114"/>
+        </scene>
+        <!--Tape Equilibrium View Controller-->
+        <scene sceneID="NbK-lN-HWS">
+            <objects>
+                <viewController storyboardIdentifier="TapeEquilibriumViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="58i-Wu-bVs" customClass="TapeEquilibriumViewController" customModule="JFAlgo_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OPB-6j-6EQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="6bv-cL-DDb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bVJ-MY-HlI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IBH-q6-mNv">
+                                <rect key="frame" x="0.0" y="64" width="430" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmd-4g-b8U">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="bvq-Fo-8K5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Zm-QF-n0h">
+                                        <rect key="frame" x="150" y="0.0" width="100" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.9976976514" blue="0.1137776896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="uGs-RK-qCt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="58i-Wu-bVs" id="oGA-u7-tiu"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vP-WD-Od5">
+                                        <rect key="frame" x="260" y="0.0" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="ZS7-ex-ibY"/>
+                                        </constraints>
+                                        <state key="normal" title="Generate"/>
+                                        <connections>
+                                            <action selector="generateAction:" destination="58i-Wu-bVs" eventType="touchUpInside" id="EDm-T0-Bxg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNR-AP-zWm">
+                                        <rect key="frame" x="350" y="0.0" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="t0P-oY-27P"/>
+                                        </constraints>
+                                        <state key="normal" title="Run"/>
+                                        <connections>
+                                            <action selector="runAction" destination="58i-Wu-bVs" eventType="touchUpInside" id="Wod-xK-QOK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IiP-OR-GqP">
+                                <rect key="frame" x="0.0" y="93" width="600" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="1" id="bda-vu-tA3">
+                                    <size key="itemSize" width="155" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="odds" id="w72-bs-fDP">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="155" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fUe-t5-FMF">
+                                                    <rect key="frame" x="5" y="10" width="142" height="30"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.9976976514" blue="0.1137776896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="fUe-t5-FMF" firstAttribute="centerY" secondItem="w72-bs-fDP" secondAttribute="centerY" id="4Z8-mW-VeI"/>
+                                            <constraint firstItem="fUe-t5-FMF" firstAttribute="leading" secondItem="w72-bs-fDP" secondAttribute="leadingMargin" constant="-3" id="Ynu-iL-lx8"/>
+                                            <constraint firstItem="fUe-t5-FMF" firstAttribute="centerX" secondItem="w72-bs-fDP" secondAttribute="centerX" constant="-1.5" id="fQE-68-ghw"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="58i-Wu-bVs" id="D1Z-Ys-Isp"/>
+                                    <outlet property="delegate" destination="58i-Wu-bVs" id="Gen-cZ-j6f"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IiP-OR-GqP" firstAttribute="top" secondItem="OPB-6j-6EQ" secondAttribute="bottom" constant="29" id="Emz-vO-YBe"/>
+                            <constraint firstItem="IiP-OR-GqP" firstAttribute="leading" secondItem="bVJ-MY-HlI" secondAttribute="leading" id="cS0-rb-3L1"/>
+                            <constraint firstItem="IiP-OR-GqP" firstAttribute="leading" secondItem="IBH-q6-mNv" secondAttribute="leading" id="hqz-Xr-I6N"/>
+                            <constraint firstAttribute="trailing" secondItem="IiP-OR-GqP" secondAttribute="trailing" id="pIG-0w-Oa9"/>
+                            <constraint firstItem="IBH-q6-mNv" firstAttribute="top" secondItem="OPB-6j-6EQ" secondAttribute="bottom" id="qLo-a5-5Zr"/>
+                            <constraint firstItem="6bv-cL-DDb" firstAttribute="top" secondItem="IiP-OR-GqP" secondAttribute="bottom" constant="1" id="uTM-ra-Vfr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="IiP-OR-GqP" id="vLT-WU-h0O"/>
+                        <outlet property="generateButton" destination="7vP-WD-Od5" id="ZAQ-Uo-xfz"/>
+                        <outlet property="numberField" destination="5Zm-QF-n0h" id="la8-mK-WY3"/>
+                        <outlet property="runButton" destination="YNR-AP-zWm" id="bHn-O9-0jd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xg6-F4-eL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="1654"/>
         </scene>
         <!--Cyclick Rotation View Controller-->
         <scene sceneID="XFT-Ig-6fG">
