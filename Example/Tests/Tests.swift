@@ -19,6 +19,12 @@ class Tests: XCTestCase {
         XCTAssert(true, "Pass")
     }
     
+   func testBinaryGap() {
+       XCTAssert(JFAlgo.BinaryGap.solution(1) == 0, "Pass")
+       XCTAssert(JFAlgo.BinaryGap.solution(9) == 2, "Pass")
+       XCTAssert(JFAlgo.BinaryGap.solution(1041) == 5, "Pass")
+   }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock() {

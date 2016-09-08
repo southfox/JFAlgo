@@ -14,6 +14,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6729CB94E3A9994A50B89C9E /* Pods_JFAlgo_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD6251BFD56E68809699F4B /* Pods_JFAlgo_Example.framework */; };
+		951FE18A1D805C5F00C8E5D9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FE1891D805C5F00C8E5D9 /* BaseViewController.swift */; };
+		954213361D803FA1000AE586 /* OddOccurrencesInArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954213351D803FA1000AE586 /* OddOccurrencesInArrayViewController.swift */; };
 		956C056E1D7F0F84006153A3 /* BinaryGapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C056D1D7F0F84006153A3 /* BinaryGapViewController.swift */; };
 		A0C9041D383DB8EE3C7CE5FF /* Pods_JFAlgo_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1C7018D62415923DE3157B /* Pods_JFAlgo_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7DD6251BFD56E68809699F4B /* Pods_JFAlgo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFAlgo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		951FE1891D805C5F00C8E5D9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		954213351D803FA1000AE586 /* OddOccurrencesInArrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OddOccurrencesInArrayViewController.swift; sourceTree = "<group>"; };
 		956C056D1D7F0F84006153A3 /* BinaryGapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryGapViewController.swift; sourceTree = "<group>"; };
 		9FB86D35A6439C9C53686A8F /* Pods-JFAlgo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFAlgo_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFAlgo_Tests/Pods-JFAlgo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1E98F77935BE4F58346B5F1 /* Pods-JFAlgo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFAlgo_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JFAlgo_Tests/Pods-JFAlgo_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,8 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				951FE1891D805C5F00C8E5D9 /* BaseViewController.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				956C056D1D7F0F84006153A3 /* BinaryGapViewController.swift */,
+				954213351D803FA1000AE586 /* OddOccurrencesInArrayViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -362,8 +368,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951FE18A1D805C5F00C8E5D9 /* BaseViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				956C056E1D7F0F84006153A3 /* BinaryGapViewController.swift in Sources */,
+				954213361D803FA1000AE586 /* OddOccurrencesInArrayViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

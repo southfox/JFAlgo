@@ -9,11 +9,11 @@
 import UIKit
 import JFAlgo
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var algorithms = [ JFAlgo.BinaryGap ]
+    var algorithms : [AnyClass] = [ JFAlgo.BinaryGap, JFAlgo.OddOccurrencesInArray ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
