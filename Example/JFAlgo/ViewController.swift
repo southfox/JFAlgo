@@ -37,7 +37,11 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
           [
             "title" : JFAlgo.PermMissingElem,
             "subtitle" : "Find the missing element in a given permutation.",
-        ]
+          ],
+          [
+            "title" : JFAlgo.PermCheck,
+            "subtitle" : "Check whether array A is a permutation.",
+          ]
     ]
     
     override func viewDidLoad() {
