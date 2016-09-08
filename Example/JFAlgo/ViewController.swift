@@ -14,7 +14,8 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var tableView: UITableView!
     
     var algorithms : [AnyClass] = [ JFAlgo.BinaryGap, JFAlgo.OddOccurrencesInArray,
-                                    JFAlgo.CyclickRotation, JFAlgo.TapeEquilibrium ]
+                                    JFAlgo.CyclickRotation, JFAlgo.TapeEquilibrium,
+                                    JFAlgo.FrogJmp ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
