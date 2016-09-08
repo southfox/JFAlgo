@@ -26,7 +26,7 @@ import JFAlgo
 // each element of array A is an integer within the range [−1,000..1,000].
 // In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 
-class CyclickRotationViewController : BaseViewController, UITextFieldDelegate, UICollectionViewDataSource {
+class CyclickRotationViewController : BaseViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var numberField: UITextField!
     @IBOutlet weak var cyclesField: UITextField!
@@ -51,8 +51,9 @@ class CyclickRotationViewController : BaseViewController, UITextFieldDelegate, U
             }
             if let tf : UITextField = cell.contentView.subviews.first as? UITextField {
                 tf.endEditing(true)
-                if let text = tf.text {
-                    A![indexPath.row] = Int(text)!
+                if let text = tf.text,
+                   let n = Int(text) {
+                    A![indexPath.row] = n
                 }
             }
         }

@@ -55,7 +55,7 @@ import JFAlgo
 // Elements of input arrays can be modified.
 
 
-class TapeEquilibriumViewController : BaseViewController, UITextFieldDelegate, UICollectionViewDataSource {
+class TapeEquilibriumViewController : BaseViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var numberField: UITextField!
     @IBOutlet weak var runButton: UIButton!
@@ -80,8 +80,9 @@ class TapeEquilibriumViewController : BaseViewController, UITextFieldDelegate, U
             }
             if let tf : UITextField = cell.contentView.subviews.first as? UITextField {
                 tf.endEditing(true)
-                if let text = tf.text {
-                    A![indexPath.row] = Int(text)!
+                if let text = tf.text,
+                   let n = Int(text) {
+                    A![indexPath.row] = n
                 }
             }
         }

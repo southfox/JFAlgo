@@ -56,16 +56,27 @@ import Foundation
 
 public class TapeEquilibrium {
     
+    struct constants {
+        struct input {
+            static let min = 2
+            static let max = 100000
+        }
+        struct domain {
+            static let min = -1000
+            static let max = 1000
+        }
+    }
+    
     public class func checkDomainGenerator(number : Int) -> Bool {
-        return number >= 2 && number <= 100000
+        return number >= constants.input.min && number <= constants.input.max
     }
     
     public class func generateDomain(number : Int) -> [Int]? {
         var A = [Int]()
         let limit = number
         for _ in 1...limit {
-            let rnd = Int(arc4random() % 2000)
-            let n = Int(1000 - rnd)
+            let rnd = Int(arc4random() % UInt32(constants.domain.max*2))
+            let n = Int(constants.domain.max - rnd)
             A.append(n)
         }
         return A
@@ -73,7 +84,7 @@ public class TapeEquilibrium {
     
     public class func solution(inout A : [Int]) -> Int {
         
-        var min = 1000*A.count
+        var min = constants.domain.max*A.count
         let n = A.count
         for var i in 0..<n {
             var p1 = 0
