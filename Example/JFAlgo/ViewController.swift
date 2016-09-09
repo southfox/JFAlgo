@@ -41,6 +41,10 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
           [
             "title" : JFAlgo.PermCheck,
             "subtitle" : "Check whether array A is a permutation.",
+          ],
+          [
+            "title" : JFAlgo.MissingInteger,
+            "subtitle" : "Find the minimal positive integer not occurring in a given sequence.",
           ]
     ]
     

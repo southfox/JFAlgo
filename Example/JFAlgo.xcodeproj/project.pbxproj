@@ -22,6 +22,8 @@
 		958E6B011D8114AC008EDCF4 /* FrogJmpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E6B001D8114AC008EDCF4 /* FrogJmpViewController.swift */; };
 		958E6B071D81A2C4008EDCF4 /* PermMissingElemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E6B061D81A2C4008EDCF4 /* PermMissingElemViewController.swift */; };
 		958E6B0B1D81D8C5008EDCF4 /* PermCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E6B0A1D81D8C5008EDCF4 /* PermCheckViewController.swift */; };
+		958E6B0F1D82319F008EDCF4 /* MissingIntegerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E6B0E1D82319F008EDCF4 /* MissingIntegerViewController.swift */; };
+		958E6B111D82358B008EDCF4 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E6B101D82358B008EDCF4 /* BaseCollectionViewController.swift */; };
 		A0C9041D383DB8EE3C7CE5FF /* Pods_JFAlgo_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1C7018D62415923DE3157B /* Pods_JFAlgo_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		958E6B001D8114AC008EDCF4 /* FrogJmpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrogJmpViewController.swift; sourceTree = "<group>"; };
 		958E6B061D81A2C4008EDCF4 /* PermMissingElemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermMissingElemViewController.swift; sourceTree = "<group>"; };
 		958E6B0A1D81D8C5008EDCF4 /* PermCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermCheckViewController.swift; sourceTree = "<group>"; };
+		958E6B0E1D82319F008EDCF4 /* MissingIntegerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissingIntegerViewController.swift; sourceTree = "<group>"; };
+		958E6B101D82358B008EDCF4 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 		9FB86D35A6439C9C53686A8F /* Pods-JFAlgo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFAlgo_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFAlgo_Tests/Pods-JFAlgo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1E98F77935BE4F58346B5F1 /* Pods-JFAlgo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFAlgo_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JFAlgo_Tests/Pods-JFAlgo_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A2073A79366A65C8C80C31AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				951FE1891D805C5F00C8E5D9 /* BaseViewController.swift */,
+				958E6B101D82358B008EDCF4 /* BaseCollectionViewController.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				956C056D1D7F0F84006153A3 /* BinaryGapViewController.swift */,
 				954213351D803FA1000AE586 /* OddOccurrencesInArrayViewController.swift */,
@@ -138,6 +143,7 @@
 				958E6AFC1D810B76008EDCF4 /* TapeEquilibriumViewController.swift */,
 				958E6B061D81A2C4008EDCF4 /* PermMissingElemViewController.swift */,
 				958E6B0A1D81D8C5008EDCF4 /* PermCheckViewController.swift */,
+				958E6B0E1D82319F008EDCF4 /* MissingIntegerViewController.swift */,
 				958E6B001D8114AC008EDCF4 /* FrogJmpViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -384,7 +390,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				951FE18A1D805C5F00C8E5D9 /* BaseViewController.swift in Sources */,
+				958E6B0F1D82319F008EDCF4 /* MissingIntegerViewController.swift in Sources */,
 				958E6AFD1D810B76008EDCF4 /* TapeEquilibriumViewController.swift in Sources */,
+				958E6B111D82358B008EDCF4 /* BaseCollectionViewController.swift in Sources */,
 				958E6B071D81A2C4008EDCF4 /* PermMissingElemViewController.swift in Sources */,
 				958E6B011D8114AC008EDCF4 /* FrogJmpViewController.swift in Sources */,
 				951FE1901D80FFC800C8E5D9 /* CyclickRotationViewController.swift in Sources */,
