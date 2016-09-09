@@ -60,7 +60,7 @@ class FrogJmpViewController : BaseViewController {
         }
         for v in [x, y, jump] {
             if JFAlgo.FrogJmp.checkDomainGenerator(v) == false {
-                self.showAlert("Please check X, Y and D are integers within the range [1..1,000,000,000]") { [weak self] in
+                self.showAlert(JFAlgo.FrogJmp.domainErrorMessage()) { [weak self] in
                     if let strong = self {
                         strong.runButton.enabled = true
                     }

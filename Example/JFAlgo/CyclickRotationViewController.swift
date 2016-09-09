@@ -46,12 +46,30 @@ class CyclickRotationViewController : BaseCollectionViewController {
         numberField.endEditing(true)
         
         if JFAlgo.CyclickRotation.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be within the range [1..100]", completion: closure)
-            return
+            self.showAlert(JFAlgo.CyclickRotation.domainErrorMessage()) { [weak self] in
+                if let strong = self {
+                    if let cl = strong.closure {
+                        cl()
+                    }
+                    if let nf = strong.numberField {
+                        nf.becomeFirstResponder()
+                    }
+                }
+            }
+           return
         }
         
         if JFAlgo.CyclickRotation.checkDomainGenerator(numberOfCycles) == false {
-            self.showAlert("\(numberOfCycles) should be within the range [1..100]", completion: closure)
+            self.showAlert(JFAlgo.CyclickRotation.domainErrorMessage()) { [weak self] in
+                if let strong = self {
+                    if let cl = strong.closure {
+                        cl()
+                    }
+                    if let cf = strong.cyclesField {
+                        cf.becomeFirstResponder()
+                    }
+                }
+            }
             return
         }
         
@@ -77,8 +95,17 @@ class CyclickRotationViewController : BaseCollectionViewController {
         cyclesField.endEditing(true)
         
         if JFAlgo.CyclickRotation.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be within the range [1..100]", completion: closure)
-            return
+            self.showAlert(JFAlgo.CyclickRotation.domainErrorMessage()) { [weak self] in
+                if let strong = self {
+                    if let cl = strong.closure {
+                        cl()
+                    }
+                    if let nf = strong.numberField {
+                        nf.becomeFirstResponder()
+                    }
+                }
+            }
+           return
         }
         
         guard let array = JFAlgo.CyclickRotation.generateDomain(number) else {

@@ -66,9 +66,10 @@ class TapeEquilibriumViewController : BaseCollectionViewController {
         }
         
         if JFAlgo.TapeEquilibrium.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be an odd integer within the range [2..1000000]", completion: closure)
+            self.showAlert(JFAlgo.TapeEquilibrium.domainErrorMessage(), completion: closure)
            return
         }
+        
         
         guard var array = A else {
             self.showAlert("\(number) generates a nil array.", completion: closure)
@@ -93,7 +94,7 @@ class TapeEquilibriumViewController : BaseCollectionViewController {
         }
         
         if JFAlgo.TapeEquilibrium.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be an odd integer within the range [2..1000000]", completion: closure)
+            self.showAlert(JFAlgo.TapeEquilibrium.domainErrorMessage(), completion: closure)
            return
         }
         

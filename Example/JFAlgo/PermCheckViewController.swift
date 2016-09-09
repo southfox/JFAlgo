@@ -73,7 +73,7 @@ class PermCheckViewController : BaseCollectionViewController {
         }
         
         if JFAlgo.PermCheck.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be an integer within the range [0..1000000]", completion: closure)
+            self.showAlert(JFAlgo.PermCheck.domainErrorMessage(), completion: closure)
            return
         }
         
@@ -100,7 +100,7 @@ class PermCheckViewController : BaseCollectionViewController {
         }
         
         if JFAlgo.PermCheck.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be an integer within the range [0..1000000]", completion: closure)
+            self.showAlert(JFAlgo.PermCheck.domainErrorMessage(), completion: closure)
            return
         }
         

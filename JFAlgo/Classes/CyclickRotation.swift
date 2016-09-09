@@ -26,18 +26,33 @@ import Foundation
 // In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 
 
-public class CyclickRotation {
+public class CyclickRotation : Algorithm {
+    
+    struct constants {
+        struct input {
+            static let min = 0
+            static let max = 100
+        }
+        struct domain {
+            static let min = -1000
+            static let max = 1000
+        }
+    }
     
     public class func checkDomainGenerator(number : Int) -> Bool {
-        return number >= 0 && number <= 100
+        return number >= constants.input.min && number <= constants.input.max
+    }
+    
+    public class func domainErrorMessage() -> String {
+        return "Number should be an integer within the range [\(constants.input.min)..\(constants.input.max)]"
     }
     
     public class func generateDomain(number : Int) -> [Int]? {
         var A = [Int]()
         let limit = number
         for _ in 1...limit {
-            let rnd = Int(arc4random() % 2000)
-            let n = Int(1000 - rnd)
+            let rnd = Int(arc4random() % UInt32(constants.domain.max*2))
+            let n = Int(constants.domain.max - rnd)
             A.append(n)
         }
         return A

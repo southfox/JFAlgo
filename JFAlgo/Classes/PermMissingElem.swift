@@ -38,7 +38,7 @@ import Foundation
 /// Copyright 2009–2016 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
 
 
-public class PermMissingElem {
+public class PermMissingElem  : Algorithm{
     
     struct constants {
         struct input {
@@ -53,6 +53,10 @@ public class PermMissingElem {
     
     public class func checkDomainGenerator(number : Int) -> Bool {
         return number >= constants.input.min && number <= constants.input.max
+    }
+    
+    public class func domainErrorMessage() -> String {
+        return "Number should be an integer within the range [\(constants.input.min)..\(constants.input.max)]"
     }
     
     public class func generateDomain(number : Int) -> [Int]? {

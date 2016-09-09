@@ -48,7 +48,7 @@ class PermMissingElemViewController : BaseCollectionViewController {
         }
         
         if JFAlgo.PermMissingElem.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be an integer within the range [0..1000000]", completion: closure)
+            self.showAlert(JFAlgo.PermMissingElem.domainErrorMessage(), completion: closure)
            return
         }
         
@@ -75,7 +75,7 @@ class PermMissingElemViewController : BaseCollectionViewController {
         }
         
         if JFAlgo.PermMissingElem.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be an integer within the range [0..1000000]", completion: closure)
+            self.showAlert(JFAlgo.PermMissingElem.domainErrorMessage(), completion: closure)
            return
         }
         

@@ -42,22 +42,37 @@ import Foundation
 //  expected worst-case space complexity is O(1), beyond input storage (not counting the storage required for input arguments).
 //  Elements of input arrays can be modified.
 
-public class OddOccurrencesInArray {
+public class OddOccurrencesInArray  : Algorithm{
+    
+    struct constants {
+        struct input {
+            static let min = 1
+            static let max = 1000000
+        }
+        struct domain {
+            static let min = 1
+            static let max = 1000000000
+        }
+    }
     
     public class func checkDomainGenerator(number : Int) -> Bool {
-        return number >= 1 && number <= 1000000 && (number % 2) == 0
+        return number >= constants.input.min && number <= constants.input.max && (number % 2) == 0
+    }
+    
+    public class func domainErrorMessage() -> String {
+        return "Number should be an odd integer within the range [\(constants.input.min)..\(constants.input.max)]"
     }
     
     public class func generateDomain(number : Int) -> [Int]? {
         var A = [Int]()
         let limit = number / 2
-        for _ in 1...limit {
-            let rnd = arc4random() % 1000000000
+        for _ in constants.domain.min...limit {
+            let rnd = arc4random() % UInt32(constants.domain.max)
             A.append(Int(rnd))
             A.append(Int(rnd))
         }
         let oddPosition = arc4random() % UInt32(limit)
-        let rnd = arc4random() % 1000000000
+        let rnd = arc4random() % UInt32(constants.domain.max)
         A[Int(oddPosition)] = Int(rnd)
         
         return A

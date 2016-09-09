@@ -54,7 +54,7 @@ import Foundation
 // Elements of input arrays can be modified.
 
 
-public class TapeEquilibrium {
+public class TapeEquilibrium : Algorithm {
     
     struct constants {
         struct input {
@@ -69,6 +69,10 @@ public class TapeEquilibrium {
     
     public class func checkDomainGenerator(number : Int) -> Bool {
         return number >= constants.input.min && number <= constants.input.max
+    }
+    
+    public class func domainErrorMessage() -> String {
+        return "Number should be an integer within the range [\(constants.input.min)..\(constants.input.max)]"
     }
     
     public class func generateDomain(number : Int) -> [Int]? {

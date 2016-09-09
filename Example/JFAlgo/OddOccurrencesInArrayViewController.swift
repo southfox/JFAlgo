@@ -55,7 +55,7 @@ class OddOccurrencesInArrayViewController : BaseCollectionViewController {
         }
         
         if JFAlgo.OddOccurrencesInArray.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be an odd integer within the range [1..1000000]", completion: closure)
+            self.showAlert(JFAlgo.OddOccurrencesInArray.domainErrorMessage(), completion: closure)
            return
         }
         
@@ -82,7 +82,7 @@ class OddOccurrencesInArrayViewController : BaseCollectionViewController {
         }
         
         if JFAlgo.OddOccurrencesInArray.checkDomainGenerator(number) == false {
-            self.showAlert("\(number) should be an odd integer within the range [1..1000000]", completion: closure)
+            self.showAlert(JFAlgo.OddOccurrencesInArray.domainErrorMessage(), completion: closure)
            return
         }
         

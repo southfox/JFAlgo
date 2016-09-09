@@ -36,17 +36,24 @@ class BinaryGapViewController : BaseViewController {
     @IBOutlet weak var numberField: UITextField!
     @IBOutlet weak var runButton: UIButton!
     
+    lazy var closure : (()->())? = { [weak self] in
+        if let strong = self {
+            strong.runButton.enabled = true
+        }
+    }
+    
     @IBAction func runAction() {
         guard let text = numberField.text,
             number = Int(text) else {
             return
         }
+        if JFAlgo.BinaryGap.checkDomainGenerator(number) == false {
+            self.showAlert(JFAlgo.BinaryGap.domainErrorMessage(), completion: closure)
+           return
+        }
+        
         runButton.enabled = false
         let solution = JFAlgo.BinaryGap.solution(number)
-        self.showAlert("\(number): Solution = \(solution)") { [weak self] in
-            if let strong = self {
-                strong.runButton.enabled = true
-            }
-        }
+        self.showAlert("\(number): Solution = \(solution)", completion: closure)
     }
 }

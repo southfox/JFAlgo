@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E1215576C348A49A270DBDD19D8D075 /* All.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BABF49F02D7D7393BB56B8EF90C17A /* All.swift */; };
+		0E1215576C348A49A270DBDD19D8D075 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BABF49F02D7D7393BB56B8EF90C17A /* Algorithm.swift */; };
 		11C22C7B844DF31A5EBDC9AC132C5E94 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */; };
 		130F048002A62769FAFCC66F2C79391A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EA577CBBFA2BDBD2FAF5E0736093E5A /* Pods-JFAlgo_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D57D645F45C96A63AD7AA54E5DC1B62 /* Pods-JFAlgo_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -129,7 +129,7 @@
 		DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		E203C4381F05BC388E08D348F2945EC5 /* Pods-JFAlgo_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JFAlgo_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
-		E4BABF49F02D7D7393BB56B8EF90C17A /* All.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = All.swift; sourceTree = "<group>"; };
+		E4BABF49F02D7D7393BB56B8EF90C17A /* Algorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 		E83CDFFCA7E5FB67CC7762AFDAF384BE /* BinaryGap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BinaryGap.swift; sourceTree = "<group>"; };
 		F42C1BF315C2090006FCA2F6D8796DBE /* JFAlgo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JFAlgo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E6F297C028481610EE3A61F04D42BB /* Pods_JFAlgo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFAlgo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,7 +269,7 @@
 		6854957F0DF0B022DEDF4CE92BC42DF1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E4BABF49F02D7D7393BB56B8EF90C17A /* All.swift */,
+				E4BABF49F02D7D7393BB56B8EF90C17A /* Algorithm.swift */,
 				E83CDFFCA7E5FB67CC7762AFDAF384BE /* BinaryGap.swift */,
 				958E6B021D81157E008EDCF4 /* FrogJmp.swift */,
 				BE808C8FA9C663FF4FFC834F3CDE37D6 /* OddOccurrencesInArray.swift */,
@@ -547,7 +547,7 @@
 				958E6B0D1D81E35C008EDCF4 /* MissingInteger.swift in Sources */,
 				958E6B051D812600008EDCF4 /* PermMissingElem.swift in Sources */,
 				958E6AFF1D810C9A008EDCF4 /* TapeEquilibrium.swift in Sources */,
-				0E1215576C348A49A270DBDD19D8D075 /* All.swift in Sources */,
+				0E1215576C348A49A270DBDD19D8D075 /* Algorithm.swift in Sources */,
 				56FBC9AF5C91001D48125D13B70E9C58 /* BinaryGap.swift in Sources */,
 				951FE18E1D80FB1100C8E5D9 /* CyclickRotation.swift in Sources */,
 				DD29DF018864A5FF377DEA76AAFF842D /* JFAlgo-dummy.m in Sources */,

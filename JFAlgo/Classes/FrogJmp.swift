@@ -36,10 +36,21 @@ import Foundation
 /// expected worst-case time complexity is O(1);
 /// expected worst-case space complexity is O(1).
 
-public class FrogJmp {
+public class FrogJmp : Algorithm {
+    
+    struct constants {
+        struct input {
+            static let min = 1
+            static let max = 1000000000
+        }
+    }
     
     public class func checkDomainGenerator(number : Int) -> Bool {
-        return number >= 1 && number <= 1000000000
+        return number >= constants.input.min && number <= constants.input.max
+    }
+    
+    public class func domainErrorMessage() -> String {
+        return "Number should be an integer within the range [\(constants.input.min)..\(constants.input.max)]"
     }
     
     public class func checkXY(X: Int, _ Y: Int) -> Bool {
