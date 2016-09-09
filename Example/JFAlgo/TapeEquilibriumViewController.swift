@@ -57,6 +57,8 @@ import JFAlgo
 
 class TapeEquilibriumViewController : BaseCollectionViewController {
 
+    let tapeEquilibrium = TapeEquilibrium()
+    
     @IBAction override func runAction() {
         super.runAction()
         
@@ -65,8 +67,8 @@ class TapeEquilibriumViewController : BaseCollectionViewController {
             return
         }
         
-        if JFAlgo.TapeEquilibrium.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.TapeEquilibrium.domainErrorMessage(), completion: closure)
+        if tapeEquilibrium.checkDomainGenerator(number) == false {
+            self.showAlert(tapeEquilibrium.domainErrorMessage(), completion: closure)
            return
         }
         
@@ -76,7 +78,7 @@ class TapeEquilibriumViewController : BaseCollectionViewController {
            return
         }
         
-        let solution = JFAlgo.TapeEquilibrium.solution(&array)
+        let solution = tapeEquilibrium.solution(&array)
         if solution != 0 {
             self.showAlert("SUCCESS: \(number) generates Array with minimal difference achieved in \(solution).", completion: closure)
         }
@@ -93,12 +95,12 @@ class TapeEquilibriumViewController : BaseCollectionViewController {
             return
         }
         
-        if JFAlgo.TapeEquilibrium.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.TapeEquilibrium.domainErrorMessage(), completion: closure)
+        if tapeEquilibrium.checkDomainGenerator(number) == false {
+            self.showAlert(tapeEquilibrium.domainErrorMessage(), completion: closure)
            return
         }
         
-        guard let array = JFAlgo.TapeEquilibrium.generateDomain(number) else {
+        guard let array = tapeEquilibrium.generateDomain(number) else {
             self.showAlert("\(number) generates a nil array.", completion: closure)
            return
         }

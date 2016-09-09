@@ -38,26 +38,16 @@ import Foundation
 
 public class FrogJmp : Algorithm {
     
-    struct constants {
-        struct input {
-            static let min = 1
-            static let max = 1000000000
-        }
+    override public init() {
+        super.init()
+        input = Limit(min: 1, max: 1000000000)
     }
     
-    public class func checkDomainGenerator(number : Int) -> Bool {
-        return number >= constants.input.min && number <= constants.input.max
-    }
-    
-    public class func domainErrorMessage() -> String {
-        return "Number should be an integer within the range [\(constants.input.min)..\(constants.input.max)]"
-    }
-    
-    public class func checkXY(X: Int, _ Y: Int) -> Bool {
+    public func checkXY(X: Int, _ Y: Int) -> Bool {
         return X >= Y
     }
     
-    public class func solution(X : Int, _ Y : Int, _ D : Int) -> Int {
+    public func solution(X : Int, _ Y : Int, _ D : Int) -> Int {
         var jumps = 0
         var result = X
         while result <= Y {

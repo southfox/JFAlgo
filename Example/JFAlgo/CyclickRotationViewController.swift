@@ -29,6 +29,7 @@ import JFAlgo
 class CyclickRotationViewController : BaseCollectionViewController {
     
     @IBOutlet weak var cyclesField: UITextField!
+    let cyclickRotation = CyclickRotation()
     
     @IBAction override func runAction() {
         super.runAction()
@@ -45,8 +46,8 @@ class CyclickRotationViewController : BaseCollectionViewController {
         
         numberField.endEditing(true)
         
-        if JFAlgo.CyclickRotation.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.CyclickRotation.domainErrorMessage()) { [weak self] in
+        if cyclickRotation.checkDomainGenerator(number) == false {
+            self.showAlert(cyclickRotation.domainErrorMessage()) { [weak self] in
                 if let strong = self {
                     if let cl = strong.closure {
                         cl()
@@ -59,8 +60,8 @@ class CyclickRotationViewController : BaseCollectionViewController {
            return
         }
         
-        if JFAlgo.CyclickRotation.checkDomainGenerator(numberOfCycles) == false {
-            self.showAlert(JFAlgo.CyclickRotation.domainErrorMessage()) { [weak self] in
+        if cyclickRotation.checkDomainGenerator(numberOfCycles) == false {
+            self.showAlert(cyclickRotation.domainErrorMessage()) { [weak self] in
                 if let strong = self {
                     if let cl = strong.closure {
                         cl()
@@ -78,7 +79,7 @@ class CyclickRotationViewController : BaseCollectionViewController {
             return
         }
         
-        JFAlgo.CyclickRotation.solution(&array, numberOfCycles)
+        cyclickRotation.solution(&array, numberOfCycles)
         A = array
         self.collectionView.reloadData()
         runButton.enabled = true
@@ -94,8 +95,8 @@ class CyclickRotationViewController : BaseCollectionViewController {
         
         cyclesField.endEditing(true)
         
-        if JFAlgo.CyclickRotation.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.CyclickRotation.domainErrorMessage()) { [weak self] in
+        if cyclickRotation.checkDomainGenerator(number) == false {
+            self.showAlert(cyclickRotation.domainErrorMessage()) { [weak self] in
                 if let strong = self {
                     if let cl = strong.closure {
                         cl()
@@ -108,7 +109,7 @@ class CyclickRotationViewController : BaseCollectionViewController {
            return
         }
         
-        guard let array = JFAlgo.CyclickRotation.generateDomain(number) else {
+        guard let array = cyclickRotation.generateDomain(number) else {
             self.showAlert("\(number) generates a nil array.", completion: closure)
             return
         }

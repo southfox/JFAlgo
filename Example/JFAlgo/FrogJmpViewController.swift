@@ -45,6 +45,8 @@ class FrogJmpViewController : BaseViewController {
     @IBOutlet weak var jumpField: UITextField!
     @IBOutlet weak var runButton: UIButton!
     
+    let frogJmp = FrogJmp()
+    
     @IBAction func runAction() {
         guard let xText = xField.text,
                 x = Int(xText),
@@ -59,8 +61,8 @@ class FrogJmpViewController : BaseViewController {
             field.resignFirstResponder()
         }
         for v in [x, y, jump] {
-            if JFAlgo.FrogJmp.checkDomainGenerator(v) == false {
-                self.showAlert(JFAlgo.FrogJmp.domainErrorMessage()) { [weak self] in
+            if frogJmp.checkDomainGenerator(v) == false {
+                self.showAlert(frogJmp.domainErrorMessage()) { [weak self] in
                     if let strong = self {
                         strong.runButton.enabled = true
                     }
@@ -69,7 +71,7 @@ class FrogJmpViewController : BaseViewController {
             }
         }
         
-        let solution = JFAlgo.FrogJmp.solution(x, y, jump)
+        let solution = frogJmp.solution(x, y, jump)
         self.showAlert("x = \(x), y = \(y), jump = \(jump): Solution = \(solution)") { [weak self] in
             if let strong = self {
                 strong.runButton.enabled = true

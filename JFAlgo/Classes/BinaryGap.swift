@@ -32,22 +32,12 @@ import Foundation
 
 public class BinaryGap : Algorithm {
     
-    struct constants {
-        struct input {
-            static let min = 1
-            static let max = 2147483647
-        }
+    override public init() {
+        super.init()
+        input = Limit(min: 1, max: 2147483647)
     }
     
-    public class func checkDomainGenerator(number : Int) -> Bool {
-        return number >= constants.input.min && number <= constants.input.max
-    }
-    
-    public class func domainErrorMessage() -> String {
-        return "Number should be an integer within the range [\(constants.input.min)..\(constants.input.max)]"
-    }
-    
-    public class func solution(N : Int) -> Int {
+    public func solution(N : Int) -> Int {
         let binary = String(N, radix: 2)
         var count = 0
         var max = 0

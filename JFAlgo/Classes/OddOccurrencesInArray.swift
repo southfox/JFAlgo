@@ -44,41 +44,36 @@ import Foundation
 
 public class OddOccurrencesInArray  : Algorithm{
     
-    struct constants {
-        struct input {
-            static let min = 1
-            static let max = 1000000
-        }
-        struct domain {
-            static let min = 1
-            static let max = 1000000000
-        }
+    override public init() {
+        super.init()
+        input = Limit(min: 1, max: 1000000)
+        domain = Limit(min: 1, max: 1000000000)
     }
     
-    public class func checkDomainGenerator(number : Int) -> Bool {
-        return number >= constants.input.min && number <= constants.input.max && (number % 2) == 0
+    public override func checkDomainGenerator(number : Int) -> Bool {
+        return super.checkDomainGenerator(number) && (number % 2) == 0
     }
     
-    public class func domainErrorMessage() -> String {
-        return "Number should be an odd integer within the range [\(constants.input.min)..\(constants.input.max)]"
+    public override func domainErrorMessage() -> String {
+        return "Number should be an odd integer within the range [\(self.input.min)..\(self.input.max)]"
     }
     
-    public class func generateDomain(number : Int) -> [Int]? {
+    public func generateDomain(number : Int) -> [Int]? {
         var A = [Int]()
         let limit = number / 2
-        for _ in constants.domain.min...limit {
-            let rnd = arc4random() % UInt32(constants.domain.max)
+        for _ in self.domain.min...limit {
+            let rnd = arc4random() % UInt32(self.domain.max)
             A.append(Int(rnd))
             A.append(Int(rnd))
         }
         let oddPosition = arc4random() % UInt32(limit)
-        let rnd = arc4random() % UInt32(constants.domain.max)
+        let rnd = arc4random() % UInt32(self.domain.max)
         A[Int(oddPosition)] = Int(rnd)
         
         return A
     }
     
-    public class func solution(inout A : [Int]) -> Int {
+    public func solution(inout A : [Int]) -> Int {
         var count = [Int: Int]()
         
         // calculate the histogram of key frequencies

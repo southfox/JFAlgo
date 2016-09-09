@@ -32,6 +32,7 @@
 		958E6B051D812600008EDCF4 /* PermMissingElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E6B041D812600008EDCF4 /* PermMissingElem.swift */; };
 		958E6B091D81D818008EDCF4 /* PermCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E6B081D81D818008EDCF4 /* PermCheck.swift */; };
 		958E6B0D1D81E35C008EDCF4 /* MissingInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E6B0C1D81E35C008EDCF4 /* MissingInteger.swift */; };
+		958E6B131D8326D2008EDCF4 /* MaxCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E6B121D8326D2008EDCF4 /* MaxCounters.swift */; };
 		9FA3B93CE0ECAC3CDC30890659AACF82 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8CBC7114A8BD478997288E693D19A8E /* Pods-JFAlgo_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C79D7E8708F3FC54EC0B7EB262BE5F93 /* Pods-JFAlgo_Tests-dummy.m */; };
 		AF71288962592437482103B1BEA83730 /* JFAlgo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E94C4288BD5A4251593673967C682B8 /* JFAlgo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -116,6 +117,7 @@
 		958E6B041D812600008EDCF4 /* PermMissingElem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermMissingElem.swift; sourceTree = "<group>"; };
 		958E6B081D81D818008EDCF4 /* PermCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermCheck.swift; sourceTree = "<group>"; };
 		958E6B0C1D81E35C008EDCF4 /* MissingInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissingInteger.swift; sourceTree = "<group>"; };
+		958E6B121D8326D2008EDCF4 /* MaxCounters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxCounters.swift; sourceTree = "<group>"; };
 		9734DF55B42ABEDC46CFC011F55EFE75 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		A9574F9CDE427F87174E10D4D6448C0B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB10328BF03076ADA1C17F4B47A2DAAB /* Pods_JFAlgo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFAlgo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +280,7 @@
 				958E6B041D812600008EDCF4 /* PermMissingElem.swift */,
 				958E6B081D81D818008EDCF4 /* PermCheck.swift */,
 				958E6B0C1D81E35C008EDCF4 /* MissingInteger.swift */,
+				958E6B121D8326D2008EDCF4 /* MaxCounters.swift */,
 				951FE18B1D80EFEC00C8E5D9 /* Sort.swift */,
 			);
 			path = Classes;
@@ -545,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				958E6B0D1D81E35C008EDCF4 /* MissingInteger.swift in Sources */,
+				958E6B131D8326D2008EDCF4 /* MaxCounters.swift in Sources */,
 				958E6B051D812600008EDCF4 /* PermMissingElem.swift in Sources */,
 				958E6AFF1D810C9A008EDCF4 /* TapeEquilibrium.swift in Sources */,
 				0E1215576C348A49A270DBDD19D8D075 /* Algorithm.swift in Sources */,

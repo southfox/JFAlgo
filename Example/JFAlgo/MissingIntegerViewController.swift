@@ -40,6 +40,8 @@ import JFAlgo
 
 class MissingIntegerViewController : BaseCollectionViewController {
     
+    let missingInteger = MissingInteger()
+    
     @IBAction override func runAction() {
         super.runAction()
         
@@ -48,8 +50,8 @@ class MissingIntegerViewController : BaseCollectionViewController {
             return
         }
         
-        if JFAlgo.MissingInteger.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.MissingInteger.domainErrorMessage(), completion: closure)
+        if missingInteger.checkDomainGenerator(number) == false {
+            self.showAlert(missingInteger.domainErrorMessage(), completion: closure)
             return
         }
         
@@ -58,7 +60,7 @@ class MissingIntegerViewController : BaseCollectionViewController {
             return
         }
         
-        let solution = JFAlgo.MissingInteger.solution(&array, N: number)
+        let solution = missingInteger.solution(&array, N: number)
         if solution != 0 {
             self.showAlert("SUCCESS: array missing integer is \(solution).", completion: closure)
         }
@@ -75,12 +77,12 @@ class MissingIntegerViewController : BaseCollectionViewController {
             return
         }
         
-        if JFAlgo.MissingInteger.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.MissingInteger.domainErrorMessage(), completion: closure)
+        if missingInteger.checkDomainGenerator(number) == false {
+            self.showAlert(missingInteger.domainErrorMessage(), completion: closure)
            return
         }
         
-        guard let array = JFAlgo.MissingInteger.generateDomain(number) else {
+        guard let array = missingInteger.generateDomain(number) else {
             self.showAlert("\(number) generates a nil array.", completion: closure)
            return
         }

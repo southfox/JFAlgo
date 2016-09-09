@@ -39,6 +39,8 @@ import JFAlgo
 
 class PermMissingElemViewController : BaseCollectionViewController {
     
+    let permMissingElem = PermMissingElem()
+    
     @IBAction override func runAction() {
         super.runAction()
         
@@ -47,8 +49,8 @@ class PermMissingElemViewController : BaseCollectionViewController {
             return
         }
         
-        if JFAlgo.PermMissingElem.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.PermMissingElem.domainErrorMessage(), completion: closure)
+        if permMissingElem.checkDomainGenerator(number) == false {
+            self.showAlert(permMissingElem.domainErrorMessage(), completion: closure)
            return
         }
         
@@ -57,7 +59,7 @@ class PermMissingElemViewController : BaseCollectionViewController {
            return
         }
         
-        let solution = JFAlgo.PermMissingElem.solution(&array, N: number)
+        let solution = permMissingElem.solution(&array, N: number)
         if solution != -1 {
             self.showAlert("array missing element is \(solution).", completion: closure)
         }
@@ -74,12 +76,12 @@ class PermMissingElemViewController : BaseCollectionViewController {
             return
         }
         
-        if JFAlgo.PermMissingElem.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.PermMissingElem.domainErrorMessage(), completion: closure)
+        if permMissingElem.checkDomainGenerator(number) == false {
+            self.showAlert(permMissingElem.domainErrorMessage(), completion: closure)
            return
         }
         
-        guard let array = JFAlgo.PermMissingElem.generateDomain(number) else {
+        guard let array = permMissingElem.generateDomain(number) else {
             self.showAlert("\(number) generates a nil array.", completion: closure)
            return
         }

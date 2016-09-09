@@ -46,6 +46,8 @@ import JFAlgo
 
 class OddOccurrencesInArrayViewController : BaseCollectionViewController {
     
+    let oddOccurrencesInArray = OddOccurrencesInArray()
+    
     @IBAction override func runAction() {
         super.runAction()
         
@@ -54,8 +56,8 @@ class OddOccurrencesInArrayViewController : BaseCollectionViewController {
             return
         }
         
-        if JFAlgo.OddOccurrencesInArray.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.OddOccurrencesInArray.domainErrorMessage(), completion: closure)
+        if oddOccurrencesInArray.checkDomainGenerator(number) == false {
+            self.showAlert(oddOccurrencesInArray.domainErrorMessage(), completion: closure)
            return
         }
         
@@ -64,7 +66,7 @@ class OddOccurrencesInArrayViewController : BaseCollectionViewController {
            return
         }
         
-        let solution = JFAlgo.OddOccurrencesInArray.solution(&array)
+        let solution = oddOccurrencesInArray.solution(&array)
         if solution != 0 {
             self.showAlert("\(number) generates an array with 1 unpaired element \(solution).", completion: closure)
         }
@@ -81,12 +83,12 @@ class OddOccurrencesInArrayViewController : BaseCollectionViewController {
             return
         }
         
-        if JFAlgo.OddOccurrencesInArray.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.OddOccurrencesInArray.domainErrorMessage(), completion: closure)
+        if oddOccurrencesInArray.checkDomainGenerator(number) == false {
+            self.showAlert(oddOccurrencesInArray.domainErrorMessage(), completion: closure)
            return
         }
         
-        guard let array = JFAlgo.OddOccurrencesInArray.generateDomain(number) else {
+        guard let array = oddOccurrencesInArray.generateDomain(number) else {
             self.showAlert("\(number) generates a nil array.", completion: closure)
            return
         }

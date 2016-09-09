@@ -62,37 +62,17 @@ import Foundation
 
 public class PermCheck  : Algorithm{
     
-    struct constants {
-        struct input {
-            static let min = 0
-            static let max = 100000
-        }
-        struct domain {
-            static let min = 1
-            static let increment = 1
-        }
+    override public init() {
+        super.init()
+        input = Limit(min: 0, max: 100000)
+        domain = Limit(min: 1, max: Int.max)
     }
     
-    public class func checkDomainGenerator(number : Int) -> Bool {
-        return number >= constants.input.min && number <= constants.input.max
+    public func generateDomain(number : Int) -> [Int]? {
+        return super.generate(number)
     }
     
-    public class func domainErrorMessage() -> String {
-        return "Number should be an integer within the range [\(constants.input.min)..\(constants.input.max)]"
-    }
-    
-    public class func generateDomain(number : Int) -> [Int]? {
-        var A = [Int]()
-        let limit = number
-        let missing = arc4random() % 2 == 0 ? Int(arc4random() % UInt32(limit)) : 0
-        for n in 1...limit {
-            if n == missing { continue }
-            A.append(n)
-        }
-        return A
-    }
-    
-    public class func solution(inout A : [Int], N : Int) -> Int {
+    public func solution(inout A : [Int], N : Int) -> Int {
         var count = [Int: Int]()
         
         // calculate the histogram of key frequencies

@@ -64,6 +64,8 @@ import JFAlgo
 
 class PermCheckViewController : BaseCollectionViewController {
     
+    let permCheck = PermCheck()
+    
     @IBAction override func runAction() {
         super.runAction()
         
@@ -72,8 +74,8 @@ class PermCheckViewController : BaseCollectionViewController {
             return
         }
         
-        if JFAlgo.PermCheck.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.PermCheck.domainErrorMessage(), completion: closure)
+        if permCheck.checkDomainGenerator(number) == false {
+            self.showAlert(permCheck.domainErrorMessage(), completion: closure)
            return
         }
         
@@ -82,7 +84,7 @@ class PermCheckViewController : BaseCollectionViewController {
            return
         }
         
-        let solution = JFAlgo.PermCheck.solution(&array, N: number)
+        let solution = permCheck.solution(&array, N: number)
         if solution == 0 {
             self.showAlert("Fail: array is NOT a permutation.", completion: closure)
         }
@@ -99,12 +101,12 @@ class PermCheckViewController : BaseCollectionViewController {
             return
         }
         
-        if JFAlgo.PermCheck.checkDomainGenerator(number) == false {
-            self.showAlert(JFAlgo.PermCheck.domainErrorMessage(), completion: closure)
+        if permCheck.checkDomainGenerator(number) == false {
+            self.showAlert(permCheck.domainErrorMessage(), completion: closure)
            return
         }
         
-        guard let array = JFAlgo.PermCheck.generateDomain(number) else {
+        guard let array = permCheck.generateDomain(number) else {
             self.showAlert("\(number) generates a nil array.", completion: closure)
            return
         }
