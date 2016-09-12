@@ -32,14 +32,14 @@
                                                     <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wq0-30-A2z">
                                                     <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -71,11 +71,30 @@
                         <segue destination="qyH-in-ZhD" kind="show" identifier="JFAlgo.PermMissingElem" id="T8x-f5-LOY"/>
                         <segue destination="879-By-jFr" kind="show" identifier="JFAlgo.PermCheck" id="ACu-yJ-ETZ"/>
                         <segue destination="OJk-Ok-wq2" kind="show" identifier="JFAlgo.MissingInteger" id="TKV-bi-lSv"/>
+                        <segue destination="02v-U0-Cba" kind="show" identifier="JFAlgo.Algorithm" id="x5d-eS-e4R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1122" y="314"/>
+        </scene>
+        <!--Algorithm View Controller-->
+        <scene sceneID="8D5-SA-qVo">
+            <objects>
+                <viewController storyboardIdentifier="AlgorithmViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="02v-U0-Cba" customClass="AlgorithmViewController" customModule="JFAlgo_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kQR-pB-dAY"/>
+                        <viewControllerLayoutGuide type="bottom" id="e0n-Np-aei"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aPm-tX-yOD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJc-4f-Q9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="256"/>
         </scene>
         <!--Binary Gap-->
         <scene sceneID="979-QM-OqD">
@@ -391,19 +410,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rbV-vc-UHR">
-                                <rect key="frame" x="0.0" y="64" width="400" height="30"/>
+                                <rect key="frame" x="0.0" y="64" width="470" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ww6-H7-N5K">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ww6-H7-N5K">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="IEH-WX-f59"/>
+                                            <constraint firstAttribute="width" constant="40" id="IEH-WX-f59"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Size" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDX-1o-ked">
-                                        <rect key="frame" x="90" y="0.0" width="60" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDX-1o-ked">
+                                        <rect key="frame" x="50" y="0.0" width="60" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.9976976514" blue="0.1137776896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="5Gq-wB-XUu"/>
@@ -414,8 +433,29 @@
                                             <outlet property="delegate" destination="xMP-IC-YX6" id="ez2-ZR-chp"/>
                                         </connections>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kym-Ve-Lq2">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="lBb-EW-Rzq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mYT-Xk-sJX">
+                                        <rect key="frame" x="160" y="0.0" width="60" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.9976976514" blue="0.1137776896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="UnP-1d-Kyd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="xMP-IC-YX6" id="w4L-4D-S3J"/>
+                                        </connections>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeO-EW-Xd3">
-                                        <rect key="frame" x="160" y="0.0" width="80" height="30"/>
+                                        <rect key="frame" x="230" y="0.0" width="80" height="30"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Wgz-75-nmF"/>
@@ -426,7 +466,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cycles" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUr-Xd-CcS">
-                                        <rect key="frame" x="250" y="0.0" width="60" height="30"/>
+                                        <rect key="frame" x="320" y="0.0" width="60" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.9976976514" blue="0.1137776896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="pqn-I5-QQM"/>
@@ -435,7 +475,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIy-B9-RFj">
-                                        <rect key="frame" x="320" y="0.0" width="80" height="30"/>
+                                        <rect key="frame" x="390" y="0.0" width="80" height="30"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="TKb-yj-AEA"/>
@@ -501,6 +541,7 @@
                         <outlet property="collectionView" destination="dXo-36-yxf" id="b8D-Zy-lRi"/>
                         <outlet property="cyclesField" destination="VUr-Xd-CcS" id="TvI-vX-Jv5"/>
                         <outlet property="generateButton" destination="CeO-EW-Xd3" id="0dD-FT-QHx"/>
+                        <outlet property="maxField" destination="mYT-Xk-sJX" id="1rp-j6-syj"/>
                         <outlet property="numberField" destination="zDX-1o-ked" id="BIO-aq-eyi"/>
                         <outlet property="runButton" destination="OIy-B9-RFj" id="IZ3-Qk-vfG"/>
                     </connections>

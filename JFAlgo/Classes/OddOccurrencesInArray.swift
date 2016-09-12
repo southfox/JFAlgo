@@ -58,7 +58,7 @@ public class OddOccurrencesInArray  : Algorithm{
         return "Number should be an odd integer within the range [\(self.input.min)..\(self.input.max)]"
     }
     
-    public func generateDomain(number : Int) -> [Int]? {
+    public override func generateDomain(number : Int) -> [Int]? {
         var A = [Int]()
         let limit = number / 2
         for _ in self.domain.min...limit {
@@ -73,7 +73,7 @@ public class OddOccurrencesInArray  : Algorithm{
         return A
     }
     
-    public func solution(inout A : [Int]) -> Int {
+    public override func solution(inout A : [Int]) -> Int {
         var count = [Int: Int]()
         
         // calculate the histogram of key frequencies

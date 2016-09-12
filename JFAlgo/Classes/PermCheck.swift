@@ -68,7 +68,7 @@ public class PermCheck  : Algorithm{
         domain = Limit(min: 1, max: Int.max)
     }
     
-    public func generateDomain(number : Int) -> [Int]? {
+    public override func generateDomain(number : Int) -> [Int]? {
         return super.generate(number)
     }
     

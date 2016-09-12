@@ -62,11 +62,11 @@ public class TapeEquilibrium : Algorithm {
         domain = Limit(min: -1000, max: 1000)
     }
    
-    public func generateDomain(number : Int) -> [Int]? {
-        return super.generateRandom(number)
+    public override func generateDomain(number : Int) -> [Int]? {
+        return super.generateRandom(input.min, max: number)
     }
     
-    public func solution(inout A : [Int]) -> Int {
+    public override func solution(inout A : [Int]) -> Int {
         
         var min = self.domain.max*A.count
         let n = A.count

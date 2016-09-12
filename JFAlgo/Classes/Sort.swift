@@ -48,12 +48,13 @@ class Sort {
     }
 
     class func shell(inout A : [Int]) {
-        var n = A.count
+        let n = A.count
         for gap in A {
-            for var i = gap; i < n; i += 1 {
+            for i in gap ..< n {
                 let temp = A[i]
                 var j = i
-                for ; j >= gap && A[j - gap] > temp; j -= gap {
+                while j >= gap && A[j - gap] > temp {
+                    j -= gap
                     A[j] = A[j - gap]
                 }
                 A[j] = temp
@@ -150,7 +151,7 @@ class Sort {
     }
     
     
-    public class func swap(inout A: [Int], i : Int, j : Int) {
+    class func swap(inout A: [Int], i : Int, j : Int) {
         let tmp = A[i]
         A[i] = A[j]
         A[j] = tmp

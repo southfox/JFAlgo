@@ -34,8 +34,8 @@ public class CyclickRotation : Algorithm {
         domain = Limit(min: -1000, max: 1000)
     }
     
-    public func generateDomain(number : Int) -> [Int]? {
-        return super.generateRandom(number)
+    public func generateDomain(min : Int, max : Int) -> [Int]? {
+        return super.generateRandom(min, max: max)
     }
     
     public func solution(inout A : [Int], _ K: Int) {

@@ -30,21 +30,19 @@ public class Algorithm {
         return "Number should be an integer within the range [\(self.input.min)..\(self.input.max)]"
     }
     
-    public func generate(number : Int) -> [Int]? {
+    public func generate(max : Int) -> [Int]? {
         var A = [Int]()
-        let limit = number
-        let missing = arc4random() % 2 == 0 ? Int(arc4random() % UInt32(limit)) : 0
-        for n in self.domain.min...limit {
+        let missing = arc4random() % 2 == 0 ? Int(arc4random() % UInt32(max)) : 0
+        for n in self.domain.min...max {
             if n == missing { continue }
             A.append(n)
         }
         return A
     }
     
-    public func generateRandom(number : Int) -> [Int]? {
+    public func generateRandom(min : Int, max : Int) -> [Int]? {
         var A = [Int]()
-        let limit = number
-        for _ in self.domain.min...limit {
+        for _ in min...max {
             let rnd = Int(arc4random() % UInt32(self.domain.max*2))
             let n = Int(self.domain.max - rnd)
             A.append(n)
@@ -52,4 +50,22 @@ public class Algorithm {
         return A
     }
     
+    public func generateDomain(max : Int) -> [Int]? {
+        return self.generate(max)
+    }
+    
+    public func solution(N : Int) -> Int {
+        assertionFailure("implement this method in the child class")
+        return 0
+    }
+    
+    public func solution(inout A : [Int]) -> Int {
+        assertionFailure("implement this method in the child class")
+        return 0
+    }
+    
+    public func solution(inout A : [Int], K: Int) -> Int {
+        assertionFailure("implement this method in the child class")
+        return 0
+    }
 }

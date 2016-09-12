@@ -43,7 +43,7 @@ public class MissingInteger  : Algorithm{
         domain = Limit(min: -2147483648, max: 2147483647)
     }
     
-    public func generateDomain(number : Int) -> [Int]? {
+    public override func generateDomain(number : Int) -> [Int]? {
         return super.generate(number)
     }
     

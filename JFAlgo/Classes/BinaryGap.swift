@@ -37,7 +37,7 @@ public class BinaryGap : Algorithm {
         input = Limit(min: 1, max: 2147483647)
     }
     
-    public func solution(N : Int) -> Int {
+    public override func solution(N : Int) -> Int {
         let binary = String(N, radix: 2)
         var count = 0
         var max = 0

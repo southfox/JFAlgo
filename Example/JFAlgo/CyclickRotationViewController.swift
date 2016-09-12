@@ -29,13 +29,16 @@ import JFAlgo
 class CyclickRotationViewController : BaseCollectionViewController {
     
     @IBOutlet weak var cyclesField: UITextField!
+    @IBOutlet weak var maxField: UITextField!
     let cyclickRotation = CyclickRotation()
     
     @IBAction override func runAction() {
         super.runAction()
         
-        guard let text = numberField.text,
-            number = Int(text) else {
+        guard let textMin = numberField.text,
+                textMax = maxField.text,
+                min = Int(textMin),
+                max = Int(textMax) else {
                 return
         }
         
@@ -46,7 +49,9 @@ class CyclickRotationViewController : BaseCollectionViewController {
         
         numberField.endEditing(true)
         
-        if cyclickRotation.checkDomainGenerator(number) == false {
+        if cyclickRotation.checkDomainGenerator(min) == false &&
+           cyclickRotation.checkDomainGenerator(max) == false &&
+           min >= max {
             self.showAlert(cyclickRotation.domainErrorMessage()) { [weak self] in
                 if let strong = self {
                     if let cl = strong.closure {
@@ -75,7 +80,7 @@ class CyclickRotationViewController : BaseCollectionViewController {
         }
         
         guard var array = A else {
-            self.showAlert("\(number) generates a nil array.", completion: closure)
+            self.showAlert("[\(min):\(max)] generates a nil array.", completion: closure)
             return
         }
         
@@ -88,14 +93,18 @@ class CyclickRotationViewController : BaseCollectionViewController {
     @IBAction override func generateAction(sender: AnyObject) {
         super.generateAction(sender)
         
-        guard let text = numberField.text,
-            number = Int(text) else {
-            return
+        guard let textMin = numberField.text,
+                textMax = maxField.text,
+                min = Int(textMin),
+                max = Int(textMax) else {
+                return
         }
         
         cyclesField.endEditing(true)
         
-        if cyclickRotation.checkDomainGenerator(number) == false {
+        if cyclickRotation.checkDomainGenerator(min) == false &&
+           cyclickRotation.checkDomainGenerator(max) == false &&
+           min >= max {
             self.showAlert(cyclickRotation.domainErrorMessage()) { [weak self] in
                 if let strong = self {
                     if let cl = strong.closure {
@@ -109,8 +118,8 @@ class CyclickRotationViewController : BaseCollectionViewController {
            return
         }
         
-        guard let array = cyclickRotation.generateDomain(number) else {
-            self.showAlert("\(number) generates a nil array.", completion: closure)
+        guard let array = cyclickRotation.generateDomain(min, max: max) else {
+            self.showAlert("[\(min):\(max)] generates a nil array.", completion: closure)
             return
         }
         
